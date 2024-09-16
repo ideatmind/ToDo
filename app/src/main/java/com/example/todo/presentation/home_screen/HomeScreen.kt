@@ -90,7 +90,7 @@ fun HomeScreen(
                             mySnackBar(
                                 scope = scope,
                                 snackbarHostState = snackbarHostState,
-                                msg = "DONE! -> ${todo.task}",
+                                msg = "Task Deleted - ${todo.task}",
                                 actionLabel = "Undo",
                                 onAction = {mainViewModel.undoDeletedTodo()}
                             )

@@ -1,5 +1,6 @@
 package com.example.todo.presentation.home_screen.components
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -10,10 +11,12 @@ import androidx.compose.material.icons.rounded.Star
 import androidx.compose.material3.Card
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.BlendMode.Companion.Color
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.example.todo.model.Todo
@@ -28,6 +31,7 @@ fun TodoCard(
     Card(
         modifier = Modifier
             .fillMaxWidth()
+            .background(MaterialTheme.colorScheme.onPrimary)
     ) {
         Row(
             modifier = Modifier
@@ -42,6 +46,7 @@ fun TodoCard(
             ) {
                 Icon(
                     imageVector = Icons.Rounded.Check,
+                    tint = androidx.compose.ui.graphics.Color.Magenta,
                     contentDescription = null
                 )
             }
@@ -56,6 +61,7 @@ fun TodoCard(
             if (todo.isImportant) {
                 Icon(
                     imageVector = Icons.Rounded.Star,
+                    tint = androidx.compose.ui.graphics.Color.Red,
                     contentDescription = null,
                     modifier = Modifier
                         .weight(1f)

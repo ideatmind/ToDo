@@ -9,7 +9,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.todo"
+    namespace = "com.ganesh.todo"
     compileSdk = 34
 
     defaultConfig {
